@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /output/public/
+# Ajoutez des règles supplémentaires pour chaque dossier si nécessaire
+
+# Empêcher l'accès direct aux dossiers d'images
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^images/ - [F,L]
+RewriteRule ^$ .output/public/index.html [L]
