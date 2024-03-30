@@ -19,7 +19,7 @@
   <div
     class="flex items-center justify-center border-b-[1px] border-neutral-200/50 p-6 dark:border-white/10 lg:justify-between">
     <div class="me-12 hidden lg:block">
-      <span>Get connected with us on social networks:</span>
+      <span>Nos réseaux sociaux:</span>
     </div>
     <!-- Social network icons container -->
     <div class="flex justify-center">
@@ -58,7 +58,7 @@
 
   <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
   <div class="m-auto py-10 text-center md:text-left">
-    <div class="grid-1 grid gap-4 md:grid-cols-8 lg:grid-cols-2 grid-cols-4">
+    <div class="grid-1 grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-2 grid-cols-4">
       <!-- TW Elements section -->
       <div class=" md:col-span-2">
         <h6

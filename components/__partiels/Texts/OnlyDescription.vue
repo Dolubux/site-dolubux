@@ -1,10 +1,8 @@
 <template>
   <span
-    class="md:text-tiny font-light font-love_font"
+    class=" font-light font-love_font"
     :class="[
-      format === 'deflaut' ? 'text-md font-normal' : '',
-      format === 'small' ? 'text-base' : '',
-      format === 'medium' ? 'text-lg' : '',
+      format == 'deflaut' ? 'text-xl md:text-xl font-normal' : format == 'small' ? 'text-lg' : format == 'medium' ? 'text-xl' : '',
       extraclass,
     ]"
   >

@@ -74,6 +74,12 @@
                 :class="extraInDescribleClass"
               >
                 {{ get_phone_name_dataContacts }}
+              </a> / <a
+                target="_blank"
+                :href="'tel:' + '0779613593'"
+                :class="extraInDescribleClass"
+              >
+              +2250779613593
               </a>
               ou sur
               <a
@@ -106,6 +112,12 @@
                 :href="'tel:' + get_phone_dataContacts"
               >
                 {{ get_phone_name_dataContacts }}
+              </a> / <a
+                target="_blank"
+                :href="'tel:' + '0779613593'"
+                :class="extraInDescribleClass"
+              >
+              +2250779613593
               </a>
               ou sur
               <a
@@ -133,10 +145,13 @@
         format="deflaut"
         extraclass="font-normal text-center text-lg opacity-80"
       />
-      <div class="flex justify-center items-center gap-2">
-        <figure>
+      
+      <div class="flex md:flex-col gap-2 w-full m-auto border-[1px] md:border-0 border-gray-100 p-1 rounded-full justify-between">
+      <!--  -->
+        <div class="flex justify-center items-center gap-2">
+        <figure >
           <img
-            class="h-16 w-16 rounded-full object-fill"
+            class="h-16 w-16 rounded-full object-contain"
             v-lazy="'/personnel/ceo_alex.jpeg'"
             src=""
             alt=""
@@ -147,6 +162,24 @@
           <span class="text-tiny font-light">CEO Chez Dolubux</span>
         </div>
       </div>
+
+<!--  -->
+      <div class="flex justify-center items-center gap-2">
+        <figure class="order-2">
+          <img
+            class="h-16 w-16 rounded-full object-contain"
+            v-lazy="'/personnel/cto.jpg'"
+            src=""
+            alt=""
+          />
+        </figure>
+        <div class="flex flex-col">
+          <span class="text-lg font-extrabold">Emmanuel Diomande</span>
+          <span class="text-tiny font-light">CTO Chez Dolubux</span>
+        </div>
+      </div>
+      </div>
+
     </div>
   </section>
 </template>

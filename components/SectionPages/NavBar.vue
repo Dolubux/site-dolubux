@@ -124,7 +124,7 @@ export default {
           classLink: 'accueil',
         },
         {
-          address: `#catalogues`,
+          address: `/#catalogues`,
           link_mobile: 'Catalogues',
           link: 'Nos services',
           classLink: 'services',

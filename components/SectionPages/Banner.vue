@@ -27,14 +27,19 @@
                </div>
                <only-description
                   title="Dolubux vous accompagne dans la conception d'applications Web et mobile visant à améliorer les performances commerciales de votre entreprise."
-                  :extraclass="'pt-2 pb-6 text-gray-700 w-10/12'"
-                  format="deflaut"
+                  :extraclass="'pt-2 pb-6 text-gray-700 w-10/12 font-medium'"
+                  format="small"
                />
             </div>
 
-            <div class="flex justify-between w-10/12 md:w-full mb-8 text-gray-700 ">
+            <div
+               class="flex justify-between w-10/12 md:w-full mb-8 text-gray-700"
+            >
                <div v-for="(ch, index) in Chiff">
-                  <div class="flex flex-col justify-center text-center  " :class="index%2!=0? 'border-x-2 px-6' : 'pr-4'">
+                  <div
+                     class="flex flex-col justify-center text-center"
+                     :class="index % 2 != 0 ? 'border-x-2 px-6' : 'pr-4'"
+                  >
                      <span class="text-5xl md:text-4xl font-black">
                         <span class=""></span>
                         <span class=""> {{ ch.value }} </span>
@@ -48,7 +53,7 @@
                   :title="'Commencez'"
                   :bg="true"
                   :nohref="false"
-                  :emit="'#prestations'"
+                  :emit="'#catalogues'"
                />
             </div>
          </div>
@@ -62,35 +67,20 @@
             />
          </div>
       </div>
-
-
-     
    </div>
 
-  
-   <div class=" m-auto flex flex-col mt-8 gap-4 ">
-      
-      <span class="text-center font-bold text-xl ">+ de 30 entreprises nous font déjà confiance</span>
-
-
-      <div class="bg-gray-50  w-full">
-      <div class="flex justify-between md:overflow-x-scroll  py-8 w-10/12 m-auto">
-        <div v-for="partenaire in Partenaires"> 
-          <div class="h-12 w-32">
-          <img v-lazy="partenaire.name" class="w-full h-full object-contain " alt="">
-          </div>
-        </div>
-      </div>
-      </div>
-  </div>
+   <div class="">
+      <Partner />
+   </div>
 </template>
 
 <script>
 import OnlyButton from '../__partiels/Buttons/OnlyButton.vue';
 import OnlyDescription from '../__partiels/Texts/OnlyDescription.vue';
 import { reactive } from 'vue';
+import Partner from './partner.vue';
 export default {
-   components: { OnlyButton, OnlyDescription },
+   components: { OnlyButton, OnlyDescription, Partner },
    setup() {
       const Chiff = reactive([
          {
@@ -98,8 +88,8 @@ export default {
             value: '+30',
          },
          {
-            name: 'Clients Satisfaits',
-            value: '100% '
+            name: 'Satisfaits',
+            value: '100% ',
          },
          {
             name: 'Trafic',
@@ -107,24 +97,9 @@ export default {
          },
       ]);
 
-      const Partenaires = reactive([
-        {
-          name: '/partenaires/dooya.png'
-        },
-        {
-          name: '/partenaires/phylosanite.png'
-        },
-        {
-          name: '/partenaires/logo_carmen_security.webp'
-        },
-        {
-          name: '/partenaires/likidons.png'
-        },{
-          name: '/partenaires/zoolouk.png'
-        }
-      ])
+     
 
-      return {Chiff, Partenaires};
+      return { Chiff };
    },
 };
 </script>
