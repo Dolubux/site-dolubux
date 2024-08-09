@@ -9,7 +9,7 @@
             <benefits />
 
             <catalogues />
-            <!-- <hebergements /> -->
+            <hebergements />
 
             <contacts />
          </div>

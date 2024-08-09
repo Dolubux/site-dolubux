@@ -1,45 +1,30 @@
 <template>
   <section>
-    <div
-      class="flex flex-col pt-32 md:pt-24 w-full big:w-8/12 m-auto"
-      id="hebergement"
-    >
-      <div class="mb-16 md:mb-8">
-        <header-section :sub="'Hebergeur+'" :title="'Suivis d\'hébergements'" />
+    <div class="flex flex-col pt-32 md:pt-24 w-full big:w-8/12 m-auto" id="hebergement">
+      <div class="mb-4 md:mb-8">
+        <header-section :sub="'Packages'" :title="'Nos Packages'" textColor="text-blue-500" :subColor="'text-gray-500'"  />
       </div>
 
       <div>
-        <div
-          class="grid grid-cols-3 gap-8 md:gap-4 w-10/12 mt-8 m-auto md:grid-cols-1 xl:grid-cols-2 big:w-full"
-        >
-          <div
-            class="flex justify-center items-start border rounded-lg"
-            v-for="price in PricingPay"
-            :key="price.id"
-            :class="price.bgColor"
-          >
+        <div class="grid grid-cols-3 gap-8 md:gap-4 w-10/12 mt-8 m-auto md:grid-cols-1 xl:grid-cols-2 big:w-full">
+          <div class="flex justify-center items-start border rounded-lg" v-for="price in PricingPay" :key="price.id"
+            :class="price.bgColor">
             <div
               class="w-full md:w-full big:w-11/12 transition duration-500 ease-in-out cursor-pointer p-10 md:px-6 wow animate__animated animate__backInLeft"
-              data-wow-offset="30"
-            >
+              data-wow-offset="30">
               <div class="flex flex-col mb-5 items-start">
-                <span
-                  class="text-3xl md:text-2xl font-extrabold mb-2"
-                  :class="price.textColor"
-                >
+                <span class="text-3xl md:text-2xl font-extrabold mb-2" :class="price.textColor">
                   {{ price.type }}
                 </span>
-                <only-description :title="price.describle" format="small" />
-                <!-- <span class="text-tiny font-ligth opacity-80 mb-0"
-                  >{{ price.describle }}.</span
-                > -->
+                <!-- <only-description :title="price.describle" format="small" /> -->
+                <span class="text-tiny font-ligth opacity-80 mb-0">{{ price.describle }}.</span>
                 <!-- <div class="flex justify-center items-end gap-x-1">
                   <span class="text-1xl font-ligth relative bottom-1">
                     {{ price.evalue }}
-                  </span>
-                  <span class="text-3xl font-extrabold">
-                    {{ price.price }}
                   </span> -->
+                <span class="text-3xl font-extrabold pt-2">
+                  {{ price.price }}
+                </span>
                 <!-- </div> -->
 
                 <!-- <span class="text-sm font-medium mt-1 opacity-90">
@@ -47,37 +32,19 @@
               </span> -->
               </div>
 
-              <div class="mt-4 mb-6">
-                <a
-                  v-if="price.intenion !== 'Bientot Disponsible'"
-                  href="#contact-nous"
-                  class="flex justify-center items-center rounded-lg py-4 text-base text-white"
-                  :class="price.btnColor"
-                >
+              <div class="mt-1 mb-6">
+                <a v-if="price.intenion !== 'Bientot Disponsible'" href="#contact-nous"
+                  class="flex justify-center items-center rounded-lg py-4 text-base text-white" :class="price.btnColor">
                   {{ price.intenion }}
                 </a>
-                <a
-                  v-else
-                  class="flex justify-center items-center rounded-lg py-4 text-white text-base font-light"
-                  :class="price.btnColor"
-                  >{{ price.intenion }}</a
-                >
+                <a v-else class="flex justify-center items-center rounded-lg py-4 text-white text-base font-light"
+                  :class="price.btnColor">{{ price.intenion }}</a>
               </div>
-              <div class=" flex-col gap-y-1 mb-8 hidden">
-                <div
-                  class="grid grid-cols-wx gap-1"
-                  v-for="rules of price.advantage"
-                  :key="rules.rules"
-                >
-                  <div
-                    style="width: 16px; height: 16px"
-                    class="inline-flex justify-center items-center rounded-full relative top-1"
-                    :class="price.btnColor"
-                  >
-                    <span
-                      style="width: 5px; height: 5px"
-                      class="inline-flex rounded-full bg-white"
-                    ></span>
+              <div class=" flex-col gap-y-1 mb-8 ">
+                <div class="grid grid-cols-wx gap-1" v-for="rules of price.advantage" :key="rules.rules">
+                  <div style="width: 16px; height: 16px"
+                    class="inline-flex justify-center items-center rounded-full relative top-[2px]" :class="price.btnColor">
+                    <span style="width: 5px; height: 5px" class="inline-flex rounded-full bg-white"></span>
                   </div>
                   <span class="text-tiny font-light opacity-80">
                     {{ rules.rule }}
@@ -112,10 +79,10 @@ export default {
         {
           id: '1',
           custom: false,
-          type: 'Particulier',
+          type: 'Standard',
           describle:
             'Le bon plan, pour cibler les personnes intéressées par vos produits.',
-          price: '',
+          price: '80.000 FCFA',
           evalue: '',
           preview: "Notre Extimation pour la creaton d'un site web complete .",
 
@@ -128,19 +95,24 @@ export default {
           `,
           links: '/contacts/site_internet_basique',
           advantage: [
-            {
-              rule: 'Choix de l\'heberger',
+          {
+              rule: 'Creation site de presentation',
             },
             {
-              rule: 'Hebergement Mutialiser - V5',
+              rule: 'Hebergement & Maintenance (1an)',
+            },
+            {
+              rule: 'Domaine - Nom de domaine (1an)',
             },
             {
               rule: 'Certificat SSL - Sécuriser',
             },
+            { rule: 'Administrateur - Webmaster' },
+            { rule: 'Internalisation - (Francais, Anglais)' },
             { rule: 'Mise à jour - Fonctionnalité' },
-            { rule: 'Maintenabilité - Site Web' },
-            { rule: 'Email Professionnel - WebMailing' },
-            { rule: 'Tracage des bugs' },
+            { rule: 'Marketing Digital - (SEO, Logo, relooking Page, 2 Affiches/sem, 1x Publicite sur 1/mois)' },
+            { rule: 'Email Professionnel - (15 emails/1Go)' },
+            { rule: 'Trafic illimite - Site Web' },
           ],
         },
 
@@ -150,7 +122,7 @@ export default {
           custom: true,
           describle:
             'Sans aucune limite, pour faire évoluer les performances de votre business.',
-          price: '',
+          price: '150.000 FCFA',
 
           evalue: '',
           preview:
@@ -164,20 +136,24 @@ export default {
             `,
           links: '',
           advantage: [
-            
-             {
-              rule: 'Choix de l\'heberger',
+            {
+              rule: 'Creation de boutique en ligne',
             },
             {
-              rule: 'Hebergement Cloud - V15',
+              rule: 'Hebergement & Maintenance (1an)',
+            },
+            {
+              rule: 'Domaine - Nom de domaine (1an)',
             },
             {
               rule: 'Certificat SSL - Sécuriser',
             },
+            { rule: 'Logiciel de gestion de stock' },
+            { rule: 'Internalisation - (Francais, Anglais)' },
             { rule: 'Mise à jour - Fonctionnalité' },
-            { rule: 'Maintenabilité - Site Web' },
-            { rule: 'Email Professionnel - WebMailing' },
-            { rule: 'Tracage des bugs' },
+            { rule: 'Marketing Digital - (SEO, Logo, relooking Page, 2 Affiches/sem, 3x Publicite sur 1/sem)' },
+            { rule: 'Email Professionnel - (15 emails/1Go)' },
+            { rule: 'Trafic illimite - Site Web' },
           ],
           spn: `
 
@@ -185,11 +161,11 @@ export default {
         },
         {
           id: '10',
-          type: 'Entreprise',
+          type: 'Susppendue',
           custom: true,
           describle:
             'Pour les entreprises, qui on la pleine connaissance de leurs business',
-          price: '',
+          price: '250.000 FCFA',
           evalue: '',
           preview: "Notre Extimation pour la creaton d'un site web complete .",
           textColor: 'text-blue-500',
@@ -201,18 +177,23 @@ export default {
           links: '/contacts/site_internet_custom',
           advantage: [
             {
-              rule: 'Choix de l\'heberger',
+              rule: 'Creation de site e-ecommerce',
             },
             {
-              rule: 'Hebergement Dédié - V30',
+              rule: 'Hebergement & Maintenance (1an)',
+            },
+            {
+              rule: 'Domaine - Nom de domaine (1an)',
             },
             {
               rule: 'Certificat SSL - Sécuriser',
             },
+            { rule: 'Logiciel de gestion de stock & livraison (APP)' },
+            { rule: 'Internalisation - (Francais, Anglais)' },
             { rule: 'Mise à jour - Fonctionnalité' },
-            { rule: 'Maintenabilité - Site Web' },
-            { rule: 'Email Professionnel - WebMailing' },
-            { rule: 'Tracage des bugs' },
+            { rule: 'Marketing Digital - (SEO, Logo, relooking Page, 4 Affiches/sem, 4x Publicite sur 1/sem)' },
+            { rule: 'Email Professionnel - (50 emails/1Go)' },
+            { rule: 'Trafic illimite - Site Web' },
           ],
         },
       ],
@@ -231,13 +212,16 @@ export default {
 html {
   background-color: white !important;
 }
+
 .shadow-3xl {
   --tw-shadow: 0px 30px 75px -25px rgba(0, 0, 0, 0.25);
   box-shadow: var(--tw-shadow);
 }
+
 .h-72 {
   height: 20rem;
 }
+
 .grid-cols-wx {
   grid-template-columns: 24px calc(100% - 24px);
 }

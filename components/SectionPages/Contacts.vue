@@ -146,7 +146,7 @@
         extraclass="font-normal text-center text-lg opacity-80"
       />
       
-      <div class="flex md:flex-col gap-2 w-full m-auto border-[1px] md:border-0 border-gray-100 p-1 rounded-full justify-between">
+      <div class="flex md:flex-col gap-4 w-full m-auto border-[1px] md:border-0 border-gray-100 p-1 rounded-full justify-between">
       <!--  -->
         <div class="flex justify-center items-center gap-2">
         <figure >
@@ -159,13 +159,13 @@
         </figure>
         <div class="flex flex-col">
           <span class="text-lg font-extrabold">Alex kouamelan</span>
-          <span class="text-tiny font-light">CEO Chez Dolubux</span>
+          <span class="text-sm font-light">Co-Founder | Software Analyst</span>
         </div>
       </div>
 
 <!--  -->
       <div class="flex justify-center items-center gap-2">
-        <figure class="order-2">
+        <figure class="order-1   ">
           <img
             class="h-16 w-16 rounded-full object-contain"
             v-lazy="'/personnel/cto.jpg'"
@@ -175,9 +175,14 @@
         </figure>
         <div class="flex flex-col">
           <span class="text-lg font-extrabold">Emmanuel Diomande</span>
-          <span class="text-tiny font-light">CTO Chez Dolubux</span>
+          <span class="text-sm font-light">Co-Founder | FullStack Developper </span>
         </div>
       </div>
+
+
+ 
+
+
       </div>
 
     </div>

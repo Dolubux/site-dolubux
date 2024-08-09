@@ -126,8 +126,21 @@ export default {
         {
           address: `/#catalogues`,
           link_mobile: 'Catalogues',
-          link: 'Nos services',
+          link: 'Services',
           classLink: 'services',
+        },
+        {
+          address: `/#catalogues`,
+          link_mobile: 'Catalogues',
+          link: 'Réalisations',
+          classLink: 'Réalisations',
+        },
+
+        {
+          address: `/#catalogues`,
+          link_mobile: 'Catalogues',
+          link: 'Teams',
+          classLink: 'Teams',
         },
 
          {

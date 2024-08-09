@@ -43,6 +43,8 @@
             class="w-[640px]"
             @loadedmetadata="loadedmetadata"
             @ended="endedvideo"
+            preload="auto"
+           controls
          >
             <source src="/videos/sw7.mp4" type="video/mp4" />
          </video>

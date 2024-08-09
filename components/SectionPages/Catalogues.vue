@@ -51,14 +51,14 @@
                            {{ catalogue.title }}
                         </span>
                      </div>
-                     <span class="text-xl mt-2">
+                     <!-- <span class="text-xl mt-2">
                         {{ catalogue.price }} CFA
-                     </span>
-                     <only-description
+                     </span> -->
+                     <!-- <only-description
                         :title="catalogue.describle"
                         :extraclass="'mt-3 hidden'"
                         format="small"
-                     />
+                     /> -->
                   </div>
                   <div class="py-2 flex flex-col">
                      <span class="text-base font-extralight"
@@ -198,6 +198,27 @@ export default {
                describle:
                   "Vous être une entreprise, un startup ou un indépendant. Et vous aimerez augmenter la visibilité, de votre entreprise, de vos produits et service sur le net ! ceci est pour vous ! Commencez dès aujourd'huit",
             },
+            // {
+            //    id: '4',
+            //    image: '/catalogues/sit-web-pro.png',
+            //    title: 'ERP (Progiciel de gestion entreprise)',
+            //    label: 'Site Web',
+            //    price: '200.000',
+            //    type: 'sw',
+            //    describle:
+            //       "Vous être une entreprise, un startup ou un indépendant. Et vous aimerez augmenter la visibilité, de votre entreprise, de vos produits et service sur le net ! ceci est pour vous ! Commencez dès aujourd'huit",
+            // },
+            // {
+            //    id: '4',
+            //    image: '/catalogues/sit-web-pro.png',
+            //    title: 'Logiciel de gestion de stock ',
+            //    label: 'Site Web',
+            //    price: '200.000',
+            //    type: 'sw',
+            //    describle:
+            //       "Vous être une entreprise, un startup ou un indépendant. Et vous aimerez augmenter la visibilité, de votre entreprise, de vos produits et service sur le net ! ceci est pour vous ! Commencez dès aujourd'huit",
+            // },
+
 
             // Application Mobile
             {
