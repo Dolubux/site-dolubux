@@ -9,10 +9,10 @@
         />
       </div>
       <div class="w-full relative">
-        <img
+        <NuxtImg
           class="w-full h-full object-cover absolute"
-          src=""
-          v-lazy="'/images/dlx-illustra.jpg'"
+          
+          src="/images/dlx-illustra.jpg"
           alt=""
         />
         <div class="absolute w-full h-full bg-gray-900 opacity-90"></div>
@@ -20,9 +20,9 @@
           class="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-2 w-10/12 big:w-8/12 py-16 m-auto rounded-lg h-full opacity-95 z-20 xl:gap-x-8 gap-x-16 gap-y-8"
         >
           <div :class="globalContactClass">
-            <img
-              v-lazy="'/icons/dlx-email.png'"
-              src=""
+            <NuxtImg
+            src="/icons/dlx-email.png"
+              
               :class="iconeClass"
               alt=""
             />
@@ -51,9 +51,9 @@
           </div>
 
           <div :class="globalContactClass">
-            <img
-              v-lazy="'/icons/dlx-message.png'"
-              src=""
+            <NuxtImg
+              :src="'/icons/dlx-message.png'"
+              
               :class="iconeClass"
               alt=""
             />
@@ -76,10 +76,10 @@
                 {{ get_phone_name_dataContacts }}
               </a> / <a
                 target="_blank"
-                :href="'tel:' + '0779613593'"
+                :href="'tel:' + '0150688497'"
                 :class="extraInDescribleClass"
               >
-              +2250779613593
+              +2250150688497
               </a>
               ou sur
               <a
@@ -93,7 +93,7 @@
           </div>
 
           <div :class="globalContactClass">
-            <img v-lazy="'/icons/dlx-call.png'" src="" :class="iconeClass" />
+            <NuxtImg :src="'/icons/dlx-call.png'"  :class="iconeClass" />
             <only-text-title
               title="Par Telephone"
               color="text-blue-500"
@@ -114,10 +114,10 @@
                 {{ get_phone_name_dataContacts }}
               </a> / <a
                 target="_blank"
-                :href="'tel:' + '0779613593'"
+                :href="'tel:' + '0150688497'"
                 :class="extraInDescribleClass"
               >
-              +2250779613593
+              +2250150688497
               </a>
               ou sur
               <a
@@ -150,10 +150,10 @@
       <!--  -->
         <div class="flex justify-center items-center gap-2">
         <figure >
-          <img
+          <NuxtImg
             class="h-16 w-16 rounded-full object-contain"
-            v-lazy="'/personnel/ceo_alex.jpeg'"
-            src=""
+            :src="'/personnel/ceo_alex.jpeg'"
+            
             alt=""
           />
         </figure>
@@ -166,10 +166,10 @@
 <!--  -->
       <div class="flex justify-center items-center gap-2">
         <figure class="order-1   ">
-          <img
+          <NuxtImg
             class="h-16 w-16 rounded-full object-contain"
-            v-lazy="'/personnel/cto.jpg'"
-            src=""
+            :src="'/personnel/cto.jpg'"
+            
             alt=""
           />
         </figure>

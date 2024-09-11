@@ -1,6 +1,5 @@
 <template>
-  <section class="fixed top-0 left-0 w-full bg-white/95 shadow-nav z-50 ">
-    
+  <section class="fixed top-0 left-0 w-full bg-white/95 shadow-nav z-50">
     <div
       v-if="navView === false"
       class="w-10/12 lg:w-full big:w-8/12 m-auto grid grid-cols-3 relative bg-white h-18 mt-0 md:h-14 lg:h-20"
@@ -16,7 +15,7 @@
         ]"
         :href="link.address"
       >
-        <!-- <img class="w-8 h-8" src="/functionality/booking.png" alt="" /> -->
+        <!-- <NuxtImg class="w-8 h-8" src="/functionality/booking.png" alt="" /> -->
         <span class="text-tiny md:flex 3xl:hidden md:text-sm LinkClass">
           {{ link.link_mobile }}</span
         >
@@ -39,7 +38,7 @@
     >
       <div class="flex items-center gap-2">
         <a href="" class="flex items-center gap-2">
-          <img class="h-9 md:w-10" v-lazy="'/logo/LogoDlx.png'" src="" alt="" />
+          <NuxtImg class="h-9 md:w-10" :src="'/logo/LogoDlx.png'" alt="" />
           <!-- <span class="text-xl font-bold text-blue-500"> Dolubux. </span> -->
         </a>
         <div class="flex flex-col">
@@ -50,17 +49,17 @@
         </div>
       </div>
 
-      <div class="flex gap-4 h-16 ">
+      <div class="flex gap-4 h-16">
         <a
           @click="ActiveLink(link.classLink, 'click')"
-          class=" h-100 flex justify-center items-center  font-medium h-100 px-3 lg:hidden link_dolubux"
+          class="h-100 flex justify-center items-center font-medium h-100 px-3 lg:hidden link_dolubux"
           v-for="link in LinksPage"
           :key="link.link"
           :class="[link.classLink]"
           :href="link.address"
           :id="link.classLink"
         >
-          <!-- <img class="w-8 h-8" src="/functionality/booking.png" alt="" /> -->
+          <!-- <NuxtImg class="w-8 h-8" src="/functionality/booking.png" alt="" /> -->
           <span class="text-base"> {{ link.link }}</span>
         </a>
       </div>
@@ -68,13 +67,15 @@
       <div class="flex items-center gap-2">
         <a
           :href="get_wa_dataContacts"
-          class="md:hidden flex items-center gap-2 text-sm lg:text-tiny xl:text-sm  border-2 py-3 px-4 rounded-full font-semibold md:text-xs transition delay-200"
+          class="md:hidden flex items-center gap-2 text-sm lg:text-tiny xl:text-sm border-2 py-3 px-4 rounded-full font-semibold md:text-xs transition delay-200"
         >
-          <!-- <img class=" h-4" v-lazy="'/icons/dlx-message.png'" alt="" /> -->
-          <span class="md:hidden 3xl:flex text-lg font-extrabold">Discutons du projet!</span>
+          <!-- <NuxtImg class=" h-4" :src="'/icons/dlx-message.png'" alt="" /> -->
+          <span class="md:hidden 3xl:flex text-lg font-extrabold"
+            >Discutons du projet!</span
+          >
         </a>
 
-          <!-- <a
+        <!-- <a
           href="/devis"
           class="md:hidden flex items-center gap-2 text-sm lg:text-tiny xl:text-sm uppercase text-blue-500  bg-blue-300/20 py-3 px-3 rounded-lg font-semibold md:text-xs transition delay-200"
         >
@@ -91,10 +92,9 @@
           @click="ShowMenuSecours"
           class="text-4xl md:text-3xl text-gray-500 lg:flex 3xl:hidden big:hidden cursor-pointer"
         >
-          <img
+          <NuxtImg
             class="h-7 w-8 opacity-80 rounded-sm"
-            v-lazy="'/logo/menu.png'"
-            src=""
+            :src="'/logo/menu.png'"
             alt=""
           />
         </button>
@@ -104,12 +104,12 @@
 </template>
 
 <script>
-import OnlyButton from '../__partiels/Buttons/OnlyButton.vue'
+import OnlyButton from "../__partiels/Buttons/OnlyButton.vue";
 export default {
   components: { OnlyButton },
   filters: {
     FirstLetterUpper(value) {
-      return value
+      return value;
     },
   },
 
@@ -119,46 +119,44 @@ export default {
       LinksPage: [
         {
           address: `/`,
-          link: 'Accueil',
-          link_mobile: 'Accueil',
-          classLink: 'accueil',
+          link: "Accueil",
+          link_mobile: "Accueil",
+          classLink: "accueil",
         },
         {
           address: `/#catalogues`,
-          link_mobile: 'Catalogues',
-          link: 'Services',
-          classLink: 'services',
+          link_mobile: "Catalogues",
+          link: "Services",
+          classLink: "services",
         },
-        {
-          address: `/#catalogues`,
-          link_mobile: 'Catalogues',
-          link: 'Réalisations',
-          classLink: 'Réalisations',
-        },
+        // {
+        //   address: `/#catalogues`,
+        //   link_mobile: 'Catalogues',
+        //   link: 'Réalisations',
+        //   classLink: 'Réalisations',
+        // },
+
+        // {
+        //   address: `/#catalogues`,
+        //   link_mobile: 'Catalogues',
+        //   link: 'Teams',
+        //   classLink: 'Teams',
+        // },
 
         {
-          address: `/#catalogues`,
-          link_mobile: 'Catalogues',
-          link: 'Teams',
-          classLink: 'Teams',
-        },
-
-         {
           address: `/a-Propos`,
-          link_mobile: 'A Propos',
-          link: 'A Propos',
-          classLink: 'a-Propos',
+          link_mobile: "A Propos",
+          link: "A Propos",
+          classLink: "a-Propos",
         },
-       
 
-        
         // {
         //   address: `/blog`,
         //   link_mobile: '6. blog',
         //   link: 'blog',
         //   classLink: 'blog',
         // },
-        
+
         // {
         //   address: `/boutique`,
         //   link_mobile: '3. Heber',
@@ -171,54 +169,48 @@ export default {
       hebergement__activeByScroll: 0,
       contact__activeByScroll: 0,
       propos__activeByScroll: 0,
-    }
+    };
   },
   computed: {
     get_phone_dataContacts() {
-      return process.env.DOLUBUX_PHONE_NUMBER
+      return process.env.DOLUBUX_PHONE_NUMBER;
     },
     get_phone_name_dataContacts() {
-      return process.env.DOLUBUX_PHONE_NUMBER
+      return process.env.DOLUBUX_PHONE_NUMBER;
     },
     get_email_dataContacts() {
-      return process.env.DOLUBUX_EMAIL
+      return process.env.DOLUBUX_EMAIL;
     },
     get_wa_dataContacts() {
-      return process.env.DOLUBUX_WHATSAPP
+      return process.env.DOLUBUX_WHATSAPP;
     },
     get_fb_dataContacts() {
-      return process.env.DOLUBUX_FACEBOOK
+      return process.env.DOLUBUX_FACEBOOK;
     },
   },
   mounted() {
- 
-
-    let __pathname = this.$route.path
-    const pathname = __pathname.split('/')
-    console.log(pathname)
-    this.ActiveLink(pathname[1] === '' ? 'accueil' : pathname[1])
-    
-   
+    const pathname = this.$route.path.split('/')[1];
+    this.ActiveLink(pathname || 'accueil');
   },
-
-  
 
   methods: {
     ShowMenuSecours() {
-      this.navView = false
+      this.navView = false;
     },
     ActiveLink(classLinkToAtived, notif) {
-      const links = document.querySelectorAll('.link_dolubux')
+      const links = document.querySelectorAll(".link_dolubux");
       links.forEach((el) => {
-        el.classList.remove('ActivedLinkClass')
-      })
+        el.classList.remove("ActivedLinkClass");
+      });
+
+      console.log(links)
 
       document
         .querySelector(`.${classLinkToAtived}`)
-        .classList.add('ActivedLinkClass')
+        .classList.add("ActivedLinkClass");
     },
   },
-}
+};
 </script>
 <style>
 .shadow-nav {

@@ -14,10 +14,10 @@
       >
         <div v-for="item in Process" :key="item.id">
           <div class="flex flex-col justify-start items-censtartter wow animate__animated animate__flipInX">
-            <img
+            <NuxtImg
               class="mb-4 h-12 w-12"
-              v-lazy="`/icons/${item.img}.png`"
-              src=""
+              :src="`/icons/${item.NuxtImg}.png`"
+              
               alt=""
             />
             <div class="flex flex-col items-start">
@@ -54,7 +54,7 @@ export default {
           description:
             "Chaque projet se déroule dans un environnement qui peut varier d'un projet à un autre. Ainsi, la réalisation de votre projet pourrait se frotter à des variables indépendantes de votre volonté.",
           color: 'text-blue-500',
-          img: 'dlx-transparence',
+          NuxtImg: 'dlx-transparence',
         },
         {
           id: '1',
@@ -62,21 +62,21 @@ export default {
           description:
             "Il y a trois réactions possibles à tout design oui, non et whaou !La troisième est celle que nous visons. Un design de qualité, est celui qui s'accorde parfaitement au cadre dans lequel il s'inscrit.",
           color: 'text-yellow-300',
-          img: 'dlx-creativite',
+          NuxtImg: 'dlx-creativite',
         },
         {
           id: '2',
           title: 'Expérience',
           description: `Dolubux, met à votre disposition son expérience et son savoir-faire, afin de concevoir la meilleure solution pour votre projet business. Nous vous assurerons un service efficace  et de qualité superieur.`,
           color: 'text-blue-500',
-          img: 'dlx-experiance',
+          NuxtImg: 'dlx-experiance',
         },
         // {
         //   id: '3',
         //   title: 'Performance',
         //   description: `Quoi que nous faisions, ont le faire bien mieux ! pour toujours mettre à vos dispositions des services de qualité supérieure ! pour vos sites web, application mobile, produits digitaux et autres.`,
         //   color: 'text-yellow-300',
-        //   img: 'dlx-performance',
+        //   NuxtImg: 'dlx-performance',
         // },
       ],
     }

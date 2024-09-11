@@ -8,9 +8,9 @@
             <div
                class="absolute inset-0 z-20 w-full h-full border-0 rounded-md bg-gray-700/95"
             >
-               <img
+               <NuxtImg
                   class="w-full h-full object-cover border-0 rounded-md opacity-30"
-                  v-lazy="site.image"
+                  :src="site.image"
                   alt=""
                />
             </div>
@@ -57,7 +57,7 @@
                @click="play"
                class="rounded-full shadow-xl bg-blue-500/80 cursor-pointer p-6"
             >
-               <img class="h-8" src="/icons/play.svg" alt="" />
+               <NuxtImg class="h-8" src="/icons/play.svg" alt="" />
             </div>
          </div>
          <!--  -->
@@ -69,7 +69,7 @@
                @click="play"
                class="rounded-full shadow-xl bg-blue-500/80 cursor-pointer p-6"
             >
-               <img class="h-8" src="/icons/pause.png" alt="" />
+               <NuxtImg class="h-8" src="/icons/pause.png" alt="" />
             </div>
          </div>
       </div>
@@ -109,7 +109,7 @@ export default {
                 Autres...`,
                describle_def_1: [],
                href_id: '/nos-prestations/website',
-               image: `https://img.freepik.com/photos-gratuite/developpement-site-web_53876-95315.jpg?w=826&t=st=1650817877~exp=1650818477~hmac=a36ffdb4c4158413d19628afa88276d18cf2a8fc13e76402df5acfc63f2ac400`,
+               image: `https://NuxtImg.freepik.com/photos-gratuite/developpement-site-web_53876-95315.jpg?w=826&t=st=1650817877~exp=1650818477~hmac=a36ffdb4c4158413d19628afa88276d18cf2a8fc13e76402df5acfc63f2ac400`,
             },
             {
                number: 'Application Mobile',
@@ -118,7 +118,7 @@ export default {
                HoverClass: 'hover:border-2  hover:text-gray-700',
                href_id: '/nos-prestations/desgin',
                short_describle: `Via application : Commande, réservation, web App, blog formation, Custom App, Application sur mesure`,
-               image: `https://img.freepik.com/psd-gratuit/gros-plan-telephone-portable-montrant-recette-ecran_53876-11966.jpg?t=st=1650817790~exp=1650818390~hmac=d7db37de2a9adea151cced1a6d9dda01104c4d0f641a3cde94efd34ac28d2fd1&w=740`,
+               image: `https://NuxtImg.freepik.com/psd-gratuit/gros-plan-telephone-portable-montrant-recette-ecran_53876-11966.jpg?t=st=1650817790~exp=1650818390~hmac=d7db37de2a9adea151cced1a6d9dda01104c4d0f641a3cde94efd34ac28d2fd1&w=740`,
             },
             {
                number: 'Marketing Digital',
@@ -127,7 +127,7 @@ export default {
                HoverClass: 'hover:border-2  hover:text-gray-700',
                href_id: '/nos-prestations/desgin',
                short_describle: `Spot Publicitaire, publicité digitale, e-mail marketing, e-whatsapp Compagne, Sms en masse`,
-               image: `https://img.freepik.com/photos-gratuite/marketing-numerique-icones-gens-affaires_53876-94833.jpg?t=st=1650817913~exp=1650818513~hmac=bae771aef67d14b3b0de1d2f68087fbc4195aef5bb74994aaa3bbd65abd8ee91&w=740`,
+               image: `https://NuxtImg.freepik.com/photos-gratuite/marketing-numerique-icones-gens-affaires_53876-94833.jpg?t=st=1650817913~exp=1650818513~hmac=bae771aef67d14b3b0de1d2f68087fbc4195aef5bb74994aaa3bbd65abd8ee91&w=740`,
             },
             {
                number: 'Évènements',

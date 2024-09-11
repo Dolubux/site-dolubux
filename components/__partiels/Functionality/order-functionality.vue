@@ -17,10 +17,10 @@
           <div class="relative rounded-lg lg:px-4">
             <div class="flex items-center gap-4 mb-4">
               <div class="flex items-center justify-center">
-                <img
+                <NuxtImg
                   class="h-9 w-10"
-                  v-lazy="`/functionality/${index.iconCard}.png`"
-                  src=""
+                  :src="`/functionality/${index.iconCard}.png`"
+                  
                   alt=""
                 />
               </div>

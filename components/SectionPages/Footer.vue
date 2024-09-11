@@ -7,10 +7,10 @@
 
 
     <div class=" relative font-sans mt-32">
-      <img
+      <NuxtImg
           class="w-full h-full object-cover absolute -z-40"
-          src=""
-          v-lazy="'/images/dlx-illustra.jpg'"
+          
+          :src="'/images/dlx-illustra.jpg'"
           alt=""
         />
         <div class="absolute w-full h-full bg-gray-900 opacity-95 -z-40"></div>
@@ -64,10 +64,10 @@
         <h6
           class="mb-4 flex gap-2 items-center justify-center font-semibold uppercase ">
           <a href="" class="flex items-center gap-2">
-              <img
+              <NuxtImg
                 class="h-10 md:w-10"
-                src=""
-                v-lazy="'/logo/LogoDlx.png'"
+                
+                :src="'/logo/LogoDlx.png'"
                 alt=""
               />
               <!-- <span class="text-xl font-bold text-blue-500"> Dolubux. </span> -->

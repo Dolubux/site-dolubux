@@ -22,12 +22,12 @@
                   768: { slidesPerView: 4, spaceBetween: 10 },
                   1024: { slidesPerView: 4, spaceBetween: 10 },
                }"
-               class="mySwiper"
+               class="w-full"
             >
                <swiper-slide v-for="partenaire in Partenaires">
                   <div class="h-12 w-32">
                      <img
-                        v-lazy="partenaire.name"
+                        :src="partenaire.name"
                         class="w-full h-full object-contain"
                         alt=""
                      />

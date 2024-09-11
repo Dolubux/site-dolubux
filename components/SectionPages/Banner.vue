@@ -5,7 +5,7 @@
       <!-- <div
       class="absolute inset-0 z-20 bg-gray-900 opacity-10 w-full h-full border-0"
     >
-      <img
+      <NuxtImg
       class="w-full h-full object-cover border-0"
       src="https://cdn.pixabay.com/photo/2018/05/14/16/54/cyber-3400789__480.jpg"
       alt=""
@@ -59,10 +59,10 @@
          </div>
 
          <div class="">
-            <img
+            <NuxtImg
                class="lg:hidden w-full h-full object-cover"
-               src=""
-               v-lazy="'/images/banner-two.jpg'"
+               
+               :src="'/images/banner-two.jpg'"
                alt=""
             />
          </div>

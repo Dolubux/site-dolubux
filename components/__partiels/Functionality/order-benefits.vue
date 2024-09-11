@@ -7,7 +7,7 @@
         <div class="w-4/12 lg:w-full md:order-last" :class="index % 2 === 0 ? 'order-0' : 'order-last' " >
           <div class="flex flex-col gap-4 w-11/12 3xl:w-full">
             <figure class="flex w-10 h-10 rounded-md justify-center items-center ">
-              <img v-lazy="item.icone" src="" alt="" class="h-full w-full opacity-80" />
+              <NuxtImg :src="item.icone"  alt="" class="h-full w-full opacity-80" />
             </figure>
 
             <span class="text-4xl font-bold md:text-2xl">
@@ -18,24 +18,24 @@
           </div>
         </div>
         <div class="w-6/12 md:w-full lg:w-10/12 lg:order-0">
-          <img
+          <NuxtImg
             class="rounded-lg object-cover w-full 3xl:hidden lg:hidden xl:flex big:hidden "
             style="height: 24em"
-            v-lazy="item.image"
-            src=""
+            :src="item.image"
+            
             :alt="item.title_EXTRA"
           />
-          <img
+          <NuxtImg
             class="rounded-lg object-cover w-full xl:hidden 3xl:flex"
             style="height: 28em"
-            v-lazy="item.image"
-            src=""
+            :src="item.image"
+            
             :alt="item.title_EXTRA"
           />
-          <img
+          <NuxtImg
             class="rounded-lg object-cover 3xl:hidden big:hidden w-full h-full lg:flex"
-            v-lazy="item.image"
-            src=""
+            :src="item.image"
+            
             :alt="item.title_EXTRA"
           />
         </div>
